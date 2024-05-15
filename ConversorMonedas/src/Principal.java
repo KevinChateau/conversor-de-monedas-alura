@@ -1,7 +1,4 @@
-import org.kcastillo.conversormonedas.models.Consulta;
-import org.kcastillo.conversormonedas.models.ObtenerFechaActual;
-import org.kcastillo.conversormonedas.models.SerialJson;
-import org.kcastillo.conversormonedas.models.SistemaTasaCambio;
+import org.kcastillo.conversormonedas.models.*;
 
 import java.io.IOException;
 
@@ -120,6 +117,7 @@ public class Principal {
             System.out.println("Error al ejecutar el programa, intente más tarde");
             System.out.println(e.getMessage());
         }
+        new EscribirConsulta().EscribirJson("Consulta-" + new ObtenerFechaActual().obtenerSoloFecha(), consultas);
 
 
 //        System.out.println(sistemaTasaCambio);

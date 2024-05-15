@@ -7,7 +7,11 @@ public class ObtenerFechaActual {
 
     public String ObtenerFecha(){
         LocalDateTime fechaHoraActual = LocalDateTime.now();
-        String formato = fechaHoraActual.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
-        return formato;
+        return fechaHoraActual.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
+    }
+
+    public String obtenerSoloFecha(){
+        LocalDateTime fechaHoraActual = LocalDateTime.now();
+        return fechaHoraActual.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 }
